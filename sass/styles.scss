@@ -1,9 +1,10 @@
 // Variables
 
-//Couleurs
+// Couleurs
 
 $Background: #F6F6F6;
 $Grey: #353535;
+$Grey_brighter: #7E7E7E;
 $Grey2: #EAEAEA;
 $Secondary: #FF79DA;
 $Primary: #9356DC;
@@ -12,14 +13,25 @@ $Green_Font: #008766;
 $black: black;
 $white: white;
 
-.font_logo-and-titles {
+// Mixins
+
+@mixin background__white {
+    background-color: white;
+}
+
+// General
+
+.logo__footer {
     font-family: "Shrikhand-Regular";
 }
 
-.font_txt {
-    font-family: "Roboto"
+body {
+    font-family: "Roboto";
+    margin: 0;
+    background-color: $Background;
 }
 
+// Homepage
 
 .main_container {
     header {
@@ -28,8 +40,9 @@ $white: white;
         }
         display: flex;
         align-items: center;
-        flex-direction: column;
-        box-shadow: 0px 2px 4px 0px #00000026;
+        justify-content: center;
+        height: 63px;
+        @include background__white;
     }
     .research--bar__background {
         .fa-solid {
@@ -47,13 +60,93 @@ $white: white;
         height: 44.24%;
         display: flex;
         justify-content: center;
+        box-shadow: 0px 2px 4px 0px #00000026;
     }
     .homepage__wrap {
+        .main__title {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0;
+            margin-top: 33px;
+            margin-bottom: 13px;
+        }
+        .sub__title {
+            font-size: 18px;
+            font-weight: 300;
+            margin: 0;
+            margin-bottom: 25px;
+        }
+        .button__explore-restaurants {
+            background: linear-gradient($Secondary, $Primary);
+            color: white;
+            font-family: "Roboto";
+            font-weight: 500;
+            font-size: 16px;
+            border-radius: 25px;
+            border: 0;
+            width: 218px;
+            height: 50px;
+            margin-bottom: 60px;
+            box-shadow: 0px 2px 4px 0px #00000026;
+        }
         display: flex;
         flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
     }
-    .button__explore-restaurants {
-        border-radius: 50px;
+    .flex__column {
+        .title__function {
+            font-weight: 700;
+            font-size: 24px;
+            margin-left: 20px;
+        }
+        .num__circle {
+            color: white;
+            font-size: 14.18px;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 24px;
+            height: 24px;
+            border: 0;
+            border-radius: 24px;
+            margin-left: -40px;
+            background-color: $Primary;
+        }
+        .button__function {
+            width: 322.49px;
+            height: 72.38px;
+            border: 0;
+            border-radius: 20px;
+            box-shadow: 0px 4px 15px 0px #00000026;
+            font-family: "Roboto";
+            font-weight: 500;
+            font-size: 16px;
+            margin-left: 32.51px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .fa-mobile-screen-button {
+            width: 13.02px;
+            height: 19.9px;
+            color: $Grey_brighter;
+        }
+        .fa-list-ul {
+            height: 15.92px;
+            color: $Grey_brighter;
+        }
+        .fa-store {
+            height: 17.91px;
+            color: $Primary;
+        }
+        padding-top: 40px;
+        padding-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        @include background__white;
     }
     width: 100%;
 }

@@ -1,9 +1,11 @@
-.font_logo-and-titles {
+.logo__footer {
   font-family: "Shrikhand-Regular";
 }
 
-.font_txt {
+body {
   font-family: "Roboto";
+  margin: 0;
+  background-color: #F6F6F6;
 }
 
 .main_container {
@@ -12,8 +14,9 @@
 .main_container header {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  justify-content: center;
+  height: 63px;
+  background-color: white;
 }
 .main_container header .header_logo {
   width: 52.53%;
@@ -24,6 +27,7 @@
   height: 44.24%;
   display: flex;
   justify-content: center;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
 }
 .main_container .research--bar__background .fa-solid {
   color: #353535;
@@ -42,7 +46,86 @@
 .main_container .homepage__wrap {
   display: flex;
   flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
 }
-.main_container .button__explore-restaurants {
-  border-radius: 50px;
+.main_container .homepage__wrap .main__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  margin-top: 33px;
+  margin-bottom: 13px;
+}
+.main_container .homepage__wrap .sub__title {
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 25px;
+}
+.main_container .homepage__wrap .button__explore-restaurants {
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 0;
+  width: 218px;
+  height: 50px;
+  margin-bottom: 60px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.main_container .flex__column {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.main_container .flex__column .title__function {
+  font-weight: 700;
+  font-size: 24px;
+  margin-left: 20px;
+}
+.main_container .flex__column .num__circle {
+  color: white;
+  font-size: 14.18px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  border-radius: 24px;
+  margin-left: -40px;
+  background-color: #9356DC;
+}
+.main_container .flex__column .button__function {
+  width: 322.49px;
+  height: 72.38px;
+  border: 0;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  margin-left: 32.51px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.main_container .flex__column .fa-mobile-screen-button {
+  width: 13.02px;
+  height: 19.9px;
+  color: #7E7E7E;
+}
+.main_container .flex__column .fa-list-ul {
+  height: 15.92px;
+  color: #7E7E7E;
+}
+.main_container .flex__column .fa-store {
+  height: 17.91px;
+  color: #9356DC;
 }/*# sourceMappingURL=styles.css.map */
