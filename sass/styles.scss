@@ -80,8 +80,8 @@ body {
             background: linear-gradient($Secondary, $Primary);
             color: white;
             font-family: "Roboto";
-            font-weight: 500;
             font-size: 16px;
+            font-weight: 500;    
             border-radius: 25px;
             border: 0;
             width: 218px;
@@ -94,10 +94,10 @@ body {
         text-align: center;
         justify-content: center;
     }
-    .flex__column {
+    .function__flex--column {
         .title__function {
-            font-weight: 700;
             font-size: 24px;
+            font-weight: 700;
             margin-left: 20px;
         }
         .num__circle {
@@ -121,8 +121,8 @@ body {
             border-radius: 20px;
             box-shadow: 0px 4px 15px 0px #00000026;
             font-family: "Roboto";
-            font-weight: 500;
             font-size: 16px;
+            font-weight: 500;
             margin-left: 32.51px;
             margin-bottom: 25px;
             display: flex;
@@ -147,6 +147,77 @@ body {
         display: flex;
         flex-direction: column;
         @include background__white;
+    }
+    .title__restaurants {
+        margin-top: 45px;
+        margin-left: 20px;
+        margin-bottom: 0;
+        font-size: 24px;
+        font-weight: 700;
+        width: 275px;
+        height: 68px;
+    }
+    .cards__flex {
+        .card {
+            width: 343px;
+            border: 0;
+            border-radius: 15px;
+            @include background__white;
+        }
+        .img__card {
+            width: 100%;
+            height: 174px; 
+            border: 0;
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            object-fit: cover;
+        }
+        .badge__nouveau {
+            width: 80px;
+            height: 29px;
+            color: $Green_Font;
+            background-color: $Green;
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 13px;
+            margin-left: 248px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+        }
+        .name__restaurants {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 13px 0 0 13px;
+        }
+        .subname__restaurants {
+            font-size: 17px;
+            font-weight: 300;
+            margin-left: 13px;
+            margin-top: 0;
+            margin-bottom: 13px;
+        }
+        .flex__txt--restaurants {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .fa-regular {
+            width: 22px;
+            height: 21px;
+        }
+        .fa-heart {
+            margin-right: 25px;
+            margin-bottom: -15px;
+            display: flex;
+            align-self: flex-end;
+        }
+        margin-top: -15px;
+        margin-left: 17px;
+        gap: 18px;
+        display: flex;
+        flex-direction: column;
     }
     width: 100%;
 }
