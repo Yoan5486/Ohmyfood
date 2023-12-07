@@ -16,14 +16,10 @@ $white: white;
 // Mixins
 
 @mixin background__white {
-    background-color: white;
+    background-color: $white;
 }
 
 // General
-
-.logo__footer {
-    font-family: "Shrikhand-Regular";
-}
 
 body {
     font-family: "Roboto";
@@ -78,7 +74,7 @@ body {
         }
         .button__explore-restaurants {
             background: linear-gradient($Secondary, $Primary);
-            color: white;
+            color: $white;
             font-family: "Roboto";
             font-size: 16px;
             font-weight: 500;    
@@ -101,7 +97,7 @@ body {
             margin-left: 20px;
         }
         .num__circle {
-            color: white;
+            color: $white;
             font-size: 14.18px;
             font-weight: 500;
             display: flex;
@@ -215,9 +211,60 @@ body {
         }
         margin-top: -15px;
         margin-left: 17px;
+        margin-bottom: 60px;
         gap: 18px;
         display: flex;
         flex-direction: column;
+    }
+    .background__footer {
+        .logo__footer {
+            font-family: "Shrikhand-Regular";
+        }
+        .txt--logo__footer {
+            font-weight: 400;
+            margin-top: 22px;
+            margin-bottom: 16px;
+            margin-left: 0;
+            margin-right: 0;
+            font-style: italic;       
+         }
+        width: 100%;
+        background-color: $Grey;
+    }
+    .flex__footer {
+        display: flex;
+        flex-direction: column;
+    }
+    .margin__footer {
+        height: 186px;
+        margin-left: 25px;
+        color: $white;
+    }
+    .directionRow__footer {
+        .fa-utensils {
+            width: 11px;
+            height: 13px;
+            margin-top: 2px;
+        }
+        .fa-handshake-angle {
+            width: 11.92px;
+            height: 13px;
+        }
+        .first--title__footer {
+            font-size: 16px;
+            font-weight: 500;
+            width: 168px;
+            height: 19px;
+            margin: 0 0 7px 22px;
+        }
+        display: flex;
+        flex-direction: row;
+    }
+    .second--title__footer {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0;
+        margin-bottom: 7px;
     }
     width: 100%;
 }
