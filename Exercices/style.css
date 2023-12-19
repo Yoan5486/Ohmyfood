@@ -1,0 +1,11 @@
+.container {
+    width: 500px;
+    height: 500px;
+    background-color: aquamarine;
+    transition: background-color 1000ms;
+}
+
+.container:hover {
+    background-color: #666AAA;
+  
+}
