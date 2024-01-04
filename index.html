@@ -51,7 +51,7 @@
         <p class="sub__title">
           Découvrez des restaurants d'exception, sélectionnés par nos soins.
         </p>
-        <button class="button__explore-restaurants">
+        <button class="button__explore-restaurants btn__explore--animation">
           Explorer nos restaurants
         </button>
       </section>
@@ -85,8 +85,10 @@
             />
             <div class="flex__txt--restaurants">
               <h3 class="name__restaurants">La palette du goût</h3>
-              <button class="fa-regular fa-heart transition__heart"> 
-              </button>
+              <div class="heart__container">
+                <i class="fa-regular fa-heart empty__heart"></i>
+                <i class="fa-solid fa-heart full__heart "></i>
+              </div>
             </div>
             <p class="subname__restaurants">Ménilmontant</p>
           </article>
@@ -99,8 +101,7 @@
             />
             <div class="flex__txt--restaurants">
               <h3 class="name__restaurants">La note enchantée</h3>
-              <button class="fa-regular fa-heart transition__heart"> 
-              </button>
+              <i class="fa-regular fa-heart transition__heart"></i>
             </div>
             <p class="subname__restaurants">Charonne</p>
           </article>
@@ -112,8 +113,7 @@
             />
             <div class="flex__txt--restaurants">
               <h3 class="name__restaurants">À la française</h3>
-              <button class="fa-regular fa-heart transition__heart"> 
-              </button>
+              <i class="fa-regular fa-heart transition__heart"></i> 
             </div>
             <p class="subname__restaurants">Cité Rouge</p>
           </article>
@@ -125,8 +125,7 @@
             />
             <div class="flex__txt--restaurants">
               <h3 class="name__restaurants">Le délice des sens</h3>
-              <button class="fa-regular fa-heart transition__heart"> 
-              </button>
+              <i class="fa-regular fa-heart transition__heart"></i>
             </div>
             <p class="subname__restaurants">Folie-Méricourt</p>
           </article>
