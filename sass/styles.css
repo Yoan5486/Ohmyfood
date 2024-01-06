@@ -1,10 +1,11 @@
+@charset "UTF-8";
 @keyframes animation__loader {
   0% {
     transform: translate(0) rotate(90deg);
     transform-origin: 0% 50%;
   }
   50% {
-    transform: translate(65px) rotate(120deg);
+    transform: translate(0px) rotate(120deg);
     transform-origin: 0% 50%;
   }
   100% {
@@ -19,6 +20,7 @@
   }
   100% {
     opacity: 0%;
+    display: none;
   }
 }
 body {
@@ -45,11 +47,12 @@ body {
   border-radius: 7px;
   width: 175px;
   height: 13px;
-  animation: animation__loader 2.7s both;
+  margin-left: 187.5px;
+  animation: animation__loader 2.7s forwards;
 }
 
 .end__loader {
-  animation: end__loader 0ms 2.7s both;
+  animation: end__loader 0ms 2.7s forwards;
 }
 
 .main_container {
@@ -120,15 +123,11 @@ header .header_logo {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
 }
 .homepage__wrap .button__explore-restaurants .btn__explore--animation {
-  transition: background-color box-shadow 400ms both;
+  transition: background-color box-shadowé 400ms both;
   background: linear-gradient(#ff79da, #9356dc);
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
-  position: relative;
-  z-index: -1;
 }
 .homepage__wrap .button__explore-restaurants .btn__explore--animation :hover {
-  position: absolute;
-  z-index: 1;
   background-color: linear-gradient(#ff79da, #9356dc) brightness(25%);
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078) brightness(25%);
 }
@@ -201,8 +200,14 @@ header .header_logo {
   height: 68px;
 }
 
+.cards__flex {
+  width: 340px;
+  height: 1058px;
+  margin-left: 17px;
+  margin-right: 18px;
+}
 .cards__flex .card {
-  width: 343px;
+  width: 340px;
   border: 0;
   border-radius: 15px;
   background-color: white;
@@ -241,8 +246,10 @@ header .header_logo {
   margin-left: 13px;
   margin-top: 0;
   margin-bottom: 13px;
+  padding-bottom: 13px;
 }
 .cards__flex .flex__txt--restaurants {
+  height: 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -261,12 +268,16 @@ header .header_logo {
   font-size: 22px;
 }
 .cards__flex .heart__container .full__heart {
-  opacity: 1;
+  opacity: 0;
   position: absolute;
   left: 0;
+  bottom: 6px;
   z-index: 10;
-  transition: opacity 500ms;
+  transition: opacity 500ms ease-in-out;
   background: linear-gradient(#9356dc, #ff79da);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .cards__flex .heart__container .full__heart:hover {
   opacity: 1;
