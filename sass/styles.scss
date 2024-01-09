@@ -19,6 +19,19 @@ $white: white;
   background-color: $white;
 }
 
+@mixin btn__explore--restaurants {
+  color: $white;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 25px;
+  border: 0;
+  width: 218px;
+  height: 50px;
+  margin-bottom: 60px;
+}
+
+
 //keyframes 
 
 @keyframes animation__loader{
@@ -125,28 +138,28 @@ header {
     margin: 0;
     margin-bottom: 25px;
   }
-  .button__explore-restaurants {
-    .btn__explore--animation {
-      :hover {
-        background-color: linear-gradient($Secondary, $Primary) brightness(25%);
-        box-shadow: 0px 2px 4px 0px #00000026 brightness(25%)
+  .btn__container {
+    .second--btn__explore {
+      &:hover {
+        opacity: 1;
       }
-      transition: background-color box-shadowé 400ms both;
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      z-index: 10;
       background: linear-gradient($Secondary, $Primary);
-      box-shadow: 0px 2px 4px 0px #00000026;
+      filter: brightness(120%);
+      box-shadow: 0px 6px 12px 0px #00000026;
+      @include btn__explore--restaurants;
+      transition: opacity 500ms ease-in-out;
     }
-    background: linear-gradient($Secondary, $Primary);
-    color: $white;
-    font-family: "Roboto";
-    font-size: 16px;
-    font-weight: 500;
-    border-radius: 25px;
-    border: 0;
-    width: 218px;
-    height: 50px;
-    margin-bottom: 60px;
-    box-shadow: 0px 2px 4px 0px #00000026;
-  }
+    .button__explore-restaurants {
+      background: linear-gradient($Secondary, $Primary);
+      @include btn__explore--restaurants;
+      box-shadow: 0px 2px 4px 0px #00000026;
+      }
+    position: relative;
+  } 
   display: flex;
   flex-wrap: wrap;
   text-align: center;
