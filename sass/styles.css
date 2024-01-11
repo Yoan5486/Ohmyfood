@@ -66,19 +66,29 @@ header {
   background-color: white;
 }
 header .header_logo {
-  width: 52.53%;
+  width: 200px;
 }
 
 .research--bar__background {
   background-color: #eaeaea;
+  box-shadow: inset 0px 8px 16px -5px rgba(126, 126, 126, 0.47);
   width: 100%;
-  height: 44.24%;
+  height: 50px;
   display: flex;
   justify-content: center;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
 }
 .research--bar__background .fa-solid, .research--bar__background .fa-location-dot {
   color: #353535;
+  margin-right: 10px;
+  left: 35px;
+  position: relative;
+}
+.research--bar__background .research-edit {
+  background-color: #eaeaea;
+  border: 0;
+  height: 25px;
+  margin-top: 13px;
+  text-align: center;
 }
 .research--bar__background ::-moz-placeholder {
   color: #353535;
@@ -89,29 +99,26 @@ header .header_logo {
   font-family: "Roboto";
 }
 
-.homepage__wrap {
-  display: flex;
-  flex-wrap: wrap;
+.infos__alignements {
   text-align: center;
-  justify-content: center;
 }
-.homepage__wrap .main__title {
+.infos__alignements .main__title {
   font-size: 24px;
   font-weight: 700;
   margin: 0;
   margin-top: 33px;
   margin-bottom: 13px;
 }
-.homepage__wrap .sub__title {
+.infos__alignements .sub__title {
   font-size: 18px;
   font-weight: 300;
   margin: 0;
   margin-bottom: 25px;
 }
-.homepage__wrap .btn__container {
+.infos__alignements .btn__container {
   position: relative;
 }
-.homepage__wrap .btn__container .second--btn__explore {
+.infos__alignements .btn__container .second--btn__explore {
   opacity: 0;
   position: absolute;
   left: 0;
@@ -130,10 +137,10 @@ header .header_logo {
   margin-bottom: 60px;
   transition: opacity 500ms ease-in-out;
 }
-.homepage__wrap .btn__container .second--btn__explore:hover {
+.infos__alignements .btn__container .second--btn__explore:hover {
   opacity: 1;
 }
-.homepage__wrap .btn__container .button__explore-restaurants {
+.infos__alignements .btn__container .button__explore-restaurants {
   background: linear-gradient(#ff79da, #9356dc);
   color: white;
   font-family: "Roboto";
@@ -352,4 +359,6 @@ header .header_logo {
   font-weight: 400;
   margin: 0;
   margin-bottom: 7px;
+  text-decoration: none;
+  color: white;
 }/*# sourceMappingURL=styles.css.map */
