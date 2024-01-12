@@ -192,6 +192,12 @@ header {
     margin-left: -18px;
     background-color: $Primary;
   }
+  .btn__function--flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .button__function {
     width: 322.49px;
     height: 72.38px;
@@ -239,7 +245,7 @@ header {
   width: 275px;
   height: 68px;
 }
-.cards__flex {
+.margin__cards {
   .card {
     width: 340px;
     border: 0;
@@ -278,8 +284,6 @@ header {
     font-weight: 300;
     margin-left: 13px;
     margin-top: 0;
-    margin-bottom: 13px;
-    padding-bottom: 13px;
   }
   .flex__txt--restaurants {
     height: 40px;
@@ -315,8 +319,11 @@ header {
     margin-top: 25px;
     font-size: 22px;
   }
+  position: relative;
+  top: -25px;
   width: 340px;
   height: 1058px;
+  gap: 13px;
   margin-left: 17px;
   margin-right: 18px;
 }
@@ -359,7 +366,6 @@ header {
     font-size: 16px;
     font-weight: 500;
     width: 168px;
-    height: 19px;
     margin: 0 0 7px 15px;
   }
   display: flex;
@@ -369,7 +375,51 @@ header {
   font-size: 16px;
   font-weight: 400;
   margin: 0;
+  margin-right: 45px;
   margin-bottom: 7px;
   text-decoration: none;
   color: $white;
+}
+
+//Media Queries
+
+/* Medium devices (tablets, larger than 767.98px) */
+
+@media (min-width: 767.98px) {
+  .directionRow__footer--responsive {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   }
+  .txt--logo__footer {
+    margin-top: 0;
+    text-align: center;
+  }
+  .margin__footer {
+    height: 120px;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .first--title__footer {
+    width: 168px;
+    height: 100%;
+  }
+  .margin__cards {
+    position: initial;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* Larges devices (desktop, larger than 1024px) */
+
+@media (max-width: 1400px) {
+
 }

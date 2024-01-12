@@ -62,25 +62,27 @@
       </section>
       <section class="function__flex--column">
         <h2 class="title__function">Fonctionnement</h2>
-        <button class="button__function">
-          <span class="num__circle">1</span>
-          <i class="fa-solid fa-mobile-screen-button function__icon"></i>
-          Choisissez un restaurant
-        </button>
-        <button class="button__function">
-          <span class="num__circle">2</span>
-          <i class="fa-solid fa-list-ul function__icon"></i>
-          Composez votre menu
-        </button>
-        <button class="button__function">
-          <span class="num__circle">3</span>
-          <i class="fa-solid fa-store function__icon"></i>
-          Dégustez au restaurant
-        </button>
+        <div class="btn__function--flex">
+          <button class="button__function">
+            <span class="num__circle">1</span>
+            <i class="fa-solid fa-mobile-screen-button function__icon"></i>
+            Choisissez un restaurant
+          </button>
+          <button class="button__function">
+            <span class="num__circle">2</span>
+            <i class="fa-solid fa-list-ul function__icon"></i>
+            Composez votre menu
+          </button>
+          <button class="button__function">
+            <span class="num__circle">3</span>
+            <i class="fa-solid fa-store function__icon"></i>
+            Dégustez au restaurant
+          </button>
+        </div>
       </section>
       <section>
         <h2 class="title__restaurants">Restaurants</h2>
-        <div class="cards__flex">
+        <div class="margin__cards">
           <article class="card">
             <p class="badge__nouveau">Nouveau</p>
             <img
@@ -148,17 +150,19 @@
       <footer class="background__footer flex__footer">
         <section class="margin__footer">
           <h2 class="logo__footer txt--logo__footer">ohmyfood</h2>
-          <div class="directionRow__footer">
-            <i class="fa-solid fa-utensils"></i>
-            <h3 class="first--title__footer">Proposer un restaurant</h3>
-          </div>
-          <div class="directionRow__footer">
-            <i class="fa-solid fa-handshake-angle"></i>
-            <h3 class="first--title__footer">Devenir partenaire</h3>
-          </div>
-          <div>
-            <h3 class="second--title__footer">Mentions légales</h3>
-            <a href="mailto:contact-ohmyfood@gmail.com" class="second--title__footer">Contact</a>
+          <div class="directionRow__footer--responsive">
+            <div class="directionRow__footer">
+              <i class="fa-solid fa-utensils"></i>
+              <h3 class="first--title__footer">Proposer un restaurant</h3>
+            </div>
+            <div class="directionRow__footer">
+              <i class="fa-solid fa-handshake-angle"></i>
+              <h3 class="first--title__footer">Devenir partenaire</h3>
+            </div>
+            <div class="directionRow__footer--responsive">
+              <h3 class="second--title__footer">Mentions légales</h3>
+              <a href="mailto:contact-ohmyfood@gmail.com" class="second--title__footer">Contact</a>
+            </div>
           </div>
         </section>
       </footer>
