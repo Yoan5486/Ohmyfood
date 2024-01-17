@@ -26,7 +26,7 @@ body {
   font-family: "Roboto";
   margin: 0;
   background-color: #f6f6f6;
-  max-width: 1400px;
+  max-width: 1440px;
 }
 
 .loader__container {
@@ -456,21 +456,21 @@ header .header_logo {
     height: 251px;
   }
   .section__cards .margin__cards .card .badge__nouveau {
-    margin-left: 25%;
-    max-width: 1440px;
+    margin-left: 28%;
   }
   .flex__footer {
     height: 114px;
   }
-  .margin__footer {
+  .flex__footer .margin__footer {
     height: 100%;
     flex-direction: row-reverse;
     justify-content: flex-end;
     margin-top: 64px;
     margin-left: 39%;
-    margin-right: 25px;
+    margin-right: 2%;
   }
-  .directionRow__footer--responsive {
-    width: 100%;
+  .flex__footer .margin__footer .second--title__footer {
+    margin-right: 7%;
+    margin-left: -20%;
   }
 }/*# sourceMappingURL=styles.css.map */

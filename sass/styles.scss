@@ -64,7 +64,7 @@ body {
   font-family: "Roboto";
   margin: 0;
   background-color: $Background;
-  max-width: 1400px;
+  max-width: 1440px;
 }
 //loader
 
@@ -454,8 +454,8 @@ header {
       }
       .card {
         .badge__nouveau {
-          margin-left: 25%;
-          max-width: 1440px;
+          margin-left: 28%;
+          //position: sticky;//
         }
         width: 490px;
         height: 251px;
@@ -472,17 +472,19 @@ header {
     gap: 28px;
   }
   .flex__footer {
+    .margin__footer {
+      .second--title__footer {
+        margin-right: 7%;
+        margin-left: -20%;
+      }
+      height: 100%;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      margin-top: 64px;
+      margin-left: 39%;
+      margin-right: 2%;
+    }
     height: 114px;
   }
-  .margin__footer {
-    height: 100%;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    margin-top: 64px;
-    margin-left: 39%;
-    margin-right: 25px;
-  }
-  .directionRow__footer--responsive {
-    width: 100%;
-  }
+  
 }
