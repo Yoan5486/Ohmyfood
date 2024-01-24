@@ -475,6 +475,7 @@ header .header_logo {
     margin-left: -20%;
   }
 }
+/*   Breakpoint 1280px   */
 @media (min-width: 1280px) {
   .margin__footer {
     position: relative;
