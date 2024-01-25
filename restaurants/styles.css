@@ -122,6 +122,8 @@ body {
   width: 40px;
 }
 .menus__border .margin__cards .margins__plats .card {
+  overflow: hidden;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -133,6 +135,34 @@ body {
   margin-bottom: 12px;
   box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
 }
+.menus__border .margin__cards .margins__plats .card .animation__checkbox {
+  margin-right: 0;
+  transition: transform 750ms ease-in-out;
+  background-color: #99e2d0;
+  width: 59px;
+  height: 69px;
+  border: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  right: -59px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menus__border .margin__cards .margins__plats .card .animation__checkbox .fa-circle-check {
+  font-size: 20px;
+  color: white;
+}
+.menus__border .margin__cards .margins__plats .card:hover .price__plats {
+  transform: translateX(-59px);
+}
+.menus__border .margin__cards .margins__plats .card:hover .animation__checkbox {
+  transform: translateX(-59px);
+}
+.menus__border .margin__cards .margins__plats .card:hover .main--title__plats, .menus__border .margin__cards .margins__plats .card:hover .sub--title__plats {
+  width: 228px;
+}
 .menus__border .margin__cards .margins__plats .card .main--title__plats {
   width: 287px;
   height: 21px;
@@ -141,10 +171,14 @@ body {
   margin-top: 0;
   margin-bottom: 5px;
   margin-left: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menus__border .margin__cards .margins__plats .card .direction__Row {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .menus__border .margin__cards .margins__plats .card .sub--title__plats {
   width: 287px;
@@ -154,34 +188,27 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menus__border .margin__cards .margins__plats .card .price__plats {
+  transition: transform 750ms ease-in-out;
   margin: 0;
+  margin-right: 13.5px;
   font-weight: 700;
   font-size: 15.04px;
   text-align: center;
 }
-.menus__border .margin__cards .margins__plats .card #checkbox__plats {
-  box-sizing: border-box;
+.menus__border .margin__cards .margins__plats .card .checkbox__plats {
+  position: absolute;
+  background-color: transparent;
+  margin-left: 315px;
+  margin-top: 20px;
+}
+.menus__border .margin__cards .margins__plats .card input {
   border: 0;
   border-radius: 13px;
-}
-.menus__border .margin__cards .margins__plats .card .animation__checkbox {
-  transition: transform 750ms ease-in-out;
-  background-color: #99e2d0;
-  width: 50px;
-  height: 69px;
-  border: 0;
-  border-top-right-radius: 7px;
-  border-bottom-right-radius: 7px;
-  position: absolute;
-  bottom: -11px;
-  margin-left: -2px;
-  margin-right: -10px;
-}
-.menus__border .margin__cards .margins__plats .card .animation__checkbox:hover {
-  transform: translateX(-50px);
-  margin-right: 0;
 }
 
 .infos__alignements {
@@ -314,7 +341,6 @@ body {
     background-color: white;
   }
   .background__section .btn__container {
-    background-clip: padding-box;
     position: relative;
     top: -75px;
   }
