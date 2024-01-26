@@ -28,23 +28,46 @@ $white: white;
   border: 0;
   width: 186px;
   height: 50px;
-  margin-bottom: 40px;
+}
+
+@mixin title__plats {
+  width: 287px;
+  margin-top: 0;
+  margin-left: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 //keyframes
 
-@keyframes animation__checkbox {
+@keyframes animation__entrees {
   0% {
-
-   }
-
-  50% {
-
+    opacity: 0;
   }
   100% {
-    
+    opacity: 100%;
   }
 }
+
+@keyframes animation__plats {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes animation__desserts {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
 // General
 
 body {
@@ -88,13 +111,12 @@ body {
   width: 100%;
   height: 275px;
   object-fit: cover;
- 
 }
 .menus__border {
   .flex__title {
     .title__restaurant {
       font-family: "Shrikhand", serif;
-      width: 341px;
+
       height: 27px;
       font-weight: 400;
       font-size: 28px;
@@ -112,7 +134,7 @@ body {
         opacity: 0;
         position: absolute;
         left: 0;
-        bottom: 18px;
+        top: 2px;
         z-index: 10;
         transition: opacity 500ms ease-in-out;
         background: linear-gradient($Primary, $Secondary);
@@ -120,18 +142,29 @@ body {
         -webkit-background-clip: text;
         color: transparent;
       }
-      margin-top: 40px;
-      margin-right: 24px;
+      top: 40px;
+      left: 35px;
       font-size: 22px;
+      height: 22px;
       position: relative;
     }
     display: flex;
     flex-direction: row;
+    width: 341px;
     margin-left: 17px;
     margin-right: 17px;
     margin-bottom: 40px;
   }
   .margin__cards {
+    .animation__entrees {
+      animation: animation__entrees 500ms 1s ease-in-out forwards;
+    }
+    .animation__plats {
+      animation: animation__plats 500ms 2s ease-in-out forwards;
+    }
+    .animation__desserts {
+      animation: animation__desserts 500ms 3s ease-in-out forwards;
+    }
     .margins__plats {
       .title__partie--repas {
         font-weight: 300;
@@ -148,7 +181,7 @@ body {
         .animation__checkbox {
           .fa-circle-check {
             font-size: 20px;
-            color : $white;
+            color: $white;
           }
           margin-right: 0;
           transition: transform 750ms ease-in-out;
@@ -171,21 +204,17 @@ body {
           .animation__checkbox {
             transform: translateX(-59px);
           }
-          .main--title__plats, .sub--title__plats {
+          .main--title__plats,
+          .sub--title__plats {
             width: 228px;
           }
         }
         .main--title__plats {
-          width: 287px;
           height: 21px;
           font-weight: 500;
           font-size: 18px;
-          margin-top: 0;
           margin-bottom: 5px;
-          margin-left: 15px;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
+          @include title__plats;
         }
         .direction__Row {
           display: flex;
@@ -193,16 +222,11 @@ body {
           justify-content: space-between;
         }
         .sub--title__plats {
-          width: 287px;
           height: 19px;
           font-weight: 300;
           font-size: 15.04px;
-          margin-top: 0;
           margin-bottom: 0;
-          margin-left: 15px;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
+          @include title__plats;
         }
         .price__plats {
           transition: transform 750ms ease-in-out;
@@ -233,8 +257,9 @@ body {
         border: 0;
         border-radius: 15.04px;
         margin-bottom: 12px;
-        box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001A;
+        box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001a;
       }
+      opacity: 0;
       width: 349px;
       height: 270px;
     }
@@ -250,11 +275,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%; 
+  width: 100%;
   max-width: 1055px;
   z-index: 100;
   bottom: 32px;
-  height: 1000px;
+  height: 1110px;
   border: 0;
   border-top-right-radius: 32px;
   border-top-left-radius: 32px;
@@ -282,12 +307,13 @@ body {
       box-shadow: 0px 2px 4px 0px #00000026;
     }
     position: relative;
-   }
-  margin-top: 25px;
+  }
+  margin-top: 40px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-} 
+}
 .background__footer {
   .logo__footer {
     font-family: "Shrikhand", serif;
@@ -344,38 +370,74 @@ body {
 
 //Media Queries
 
-/* Breakpoints 1055px */
+/* Medium devices (tablets, larger than 767.98px) */
 
-@media (min-width: 1055px) {
-
- 
-
-  .menus__border {
-    position: relative;
-    background-color: $Background;
-    background-clip: padding-box;
+@media (min-width: 767.98px) {
+  .directionRow__footer--responsive {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .txt--logo__footer {
+    margin-top: 0 !important;
+    text-align: center;
+  }
+  .margin__footer {
+    height: 120px;
+    margin-left: 25px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Larges devices (desktop, larger than 1024px) */
+
+@media (min-width: 1024px) {
+  .flex__footer {
+    .margin__footer {
+      .txt--logo__footer {
+        margin-right: 10px;
+      }
+      .second--title__footer {
+        margin-right: 7%;
+        margin-left: -20%;
+      }
+      height: 100%;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      margin-top: 64px;
+      margin-left: 39%;
+    }
+    height: 114px;
+  }
+}
+
+/*   Breakpoints 1055px   */
+
+@media (min-width: 1055px) {
+  .menus__border {
     margin-left: auto;
     margin-right: auto;
+    height: 1142px;
     width: 1055px;
-    z-index: 100;
-    bottom: 32px;
-    height: 1247px;
-    border: 0;
-    border-top-right-radius: 32px;
-    border-top-left-radius: 32px;
   }
   .background__section {
-    .btn__container {
-      position: relative;
-      top: -75px;
-    }
     top: 340px;
     width: 100%;
-    height: 1215px;
+    height: 1110px;
     background-color: $white;
   }
-  
+}
+
+/*   Breakpoint 1280px   */
+
+@media (min-width: 1280px) {
+  .margin__footer {
+    .txt--logo__footer {
+      position: absolute;
+      right: 90px;
+    }
+    position: relative;
+  }
 }
