@@ -313,8 +313,8 @@ header {
       }
       opacity: 0;
       position: absolute;
-      left: 0;
-      bottom: 7px;
+      right: 0;
+      bottom: 27px;
       z-index: 10;
       transition: opacity 500ms ease-in-out;
       background: linear-gradient($Primary, $Secondary);
@@ -393,6 +393,9 @@ header {
 
 @media (min-width: 767.98px) {
   .margin__cards {
+    .full__heart {
+      bottom: 44px !important;
+    }
     width: 100%;
     height: 100%;
     margin-left: 0;
@@ -448,6 +451,9 @@ header {
   }
   .section__cards {
     .margin__cards {
+      .full__heart {
+        bottom: 40px !important;
+      }
       .cards__responsive {
         display: flex;
         flex-direction: row;

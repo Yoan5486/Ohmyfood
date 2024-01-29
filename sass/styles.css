@@ -309,8 +309,8 @@ header .header_logo {
 .margin__cards .heart__container .full__heart {
   opacity: 0;
   position: absolute;
-  left: 0;
-  bottom: 7px;
+  right: 0;
+  bottom: 27px;
   z-index: 10;
   transition: opacity 500ms ease-in-out;
   background: linear-gradient(#9356dc, #ff79da);
@@ -391,6 +391,9 @@ header .header_logo {
     justify-content: center;
     flex-wrap: wrap;
   }
+  .margin__cards .full__heart {
+    bottom: 44px !important;
+  }
   .section__cards {
     margin-bottom: 40px;
   }
@@ -446,6 +449,9 @@ header .header_logo {
     height: 552px;
     margin-left: 180px;
     margin-right: 180px;
+  }
+  .section__cards .margin__cards .full__heart {
+    bottom: 40px !important;
   }
   .section__cards .margin__cards .cards__responsive {
     display: flex;

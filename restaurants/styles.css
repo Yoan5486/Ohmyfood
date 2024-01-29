@@ -85,6 +85,7 @@ body {
 .menus__border .flex__title {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: 341px;
   margin-left: 17px;
   margin-right: 17px;
@@ -103,7 +104,7 @@ body {
 }
 .menus__border .flex__title .heart__container {
   top: 40px;
-  left: 35px;
+  margin-right: 24px;
   font-size: 22px;
   height: 22px;
   position: relative;
@@ -234,16 +235,6 @@ body {
   font-weight: 700;
   font-size: 15.04px;
   text-align: center;
-}
-.menus__border .margin__cards .margins__plats .card .checkbox__plats {
-  position: absolute;
-  background-color: transparent;
-  margin-left: 315px;
-  margin-top: 20px;
-}
-.menus__border .margin__cards .margins__plats .card input {
-  border: 0;
-  border-radius: 13px;
 }
 
 .infos__alignements {

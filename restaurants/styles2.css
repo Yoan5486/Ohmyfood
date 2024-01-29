@@ -1,0 +1,21 @@
+.menus__border {
+  height: 1191px;
+}
+.menus__border .margin__cards {
+  height: 1191px;
+}
+.menus__border .margin__cards .margins__entrees {
+  opacity: 0;
+  width: 349px;
+  height: 351px;
+}
+
+/*   Breakpoints 1055px   */
+@media (min-width: 1055px) {
+  .menus__border {
+    height: 1223px;
+  }
+  .background__section {
+    height: 1191px;
+  }
+}/*# sourceMappingURL=styles - La note enchantée.css.map */
