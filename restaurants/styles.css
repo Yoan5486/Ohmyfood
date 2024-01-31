@@ -142,7 +142,6 @@ body {
 }
 .menus__border .margin__cards .margins__plats {
   opacity: 0;
-  width: 349px;
   height: 270px;
 }
 .menus__border .margin__cards .margins__plats .title__partie--repas {
@@ -204,6 +203,7 @@ body {
   font-weight: 500;
   font-size: 18px;
   margin-bottom: 5px;
+  transition: width 1s;
   width: 287px;
   margin-top: 0;
   margin-left: 15px;
@@ -221,6 +221,7 @@ body {
   font-weight: 300;
   font-size: 15.04px;
   margin-bottom: 0;
+  transition: width 1s;
   width: 287px;
   margin-top: 0;
   margin-left: 15px;
@@ -381,6 +382,9 @@ body {
 }
 /*   Breakpoints 1055px   */
 @media (min-width: 1055px) {
+  .card {
+    width: 634px !important;
+  }
   .menus__border {
     margin-left: auto;
     margin-right: auto;
