@@ -90,6 +90,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  pointer-events: none;
 }
 .end__loader {
   animation: end__loader 0ms 2.7s forwards;
